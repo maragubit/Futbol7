@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{%load static%}
+{%block contenido%}
+<br>
+<div class="jugador">
+    <div class="ficha">
+        <div class="row" >
+            <div class="col-4">
+            <img src="{% static 'images/jugador.jpg' %}" alt="imagen jugador" style="width:150px"></img>
+            <table>
+            <tr><td>Puntos: {{jugador.puntos}}</td></tr>
+            <tr><td>P. Jugados: {{jugador.partidos_jugados}}</td></tr>
+            <tr><td>MVP: {{jugador.mvp.count}}</td></tr>
+            </table>
+            </div>
+            <div class="col-8">
+                <h3>{{jugador}}</h3>
+                <table>   
+                        <tr><td>P. Ganados: {{jugador.partidos_ganados}}</td><td>P. perdidos: {{jugador.partidos_perdidos}}</td></tr>
+                        <tr><td>T. amarillas: {{jugador.tarjetas_amarillas}}</td><td>T. rojas: {{jugador.tarjetas_rojas}}</td></tr>
+                        <rt><td>GA: {{jugador.goles_a_favor}}</td><td>GC: {{jugador.goles_en_contra}}</td></tr>
+                </table>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Sancionado: {{jugador.sancionado}} </p>
+                    </div>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<br>
+{%endblock%}
