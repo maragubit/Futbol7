@@ -20,7 +20,8 @@ from core.views import home,clasificacion
 from jugadores.views import JugadorDetailView
 from equipos.views import convocatoria,EquipoDetailView
 from partidos.views import partidos
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
@@ -30,3 +31,5 @@ urlpatterns = [
     path('partidos',partidos, name="partidos"),
     path("equipo/<int:pk>",EquipoDetailView.as_view(), name="equipo"),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

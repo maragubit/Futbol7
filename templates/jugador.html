@@ -6,7 +6,7 @@
     <div class="ficha">
         <div class="row" >
             <div class="col-4">
-            <img src="{% static 'images/jugador.jpg' %}" alt="imagen jugador" style="width:150px"></img>
+            <img src="{{jugador.imagen.url}}" alt="imagen jugador" style="width:150px"></img>
             <table>
             <tr><td>Puntos: {{jugador.puntos}}</td></tr>
             <tr><td>P. Jugados: {{jugador.partidos_jugados}}</td></tr>
