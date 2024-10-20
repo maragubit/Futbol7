@@ -6,7 +6,7 @@ class Jugador(models.Model):
     
     nombre=models.CharField(max_length=100)
     telefono=models.CharField(max_length=100, blank=True, null=True)
-    imagen = models.ImageField(upload_to='jugadores',blank=True,null=True)
+    imagen = models.ImageField(upload_to='jugadores',blank=True,null=True, default='jugador.jpg')
    
     def __str__(self):
             hoy=timezone.now()

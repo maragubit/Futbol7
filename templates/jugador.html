@@ -3,32 +3,52 @@
 {%block contenido%}
 <br>
 <div class="jugador">
-    <div class="ficha">
-        <div class="row" >
-            <div class="col-4">
-            <img src="{{jugador.imagen.url}}" alt="imagen jugador" style="width:150px"></img>
-            <table>
-            <tr><td>Puntos: {{jugador.puntos}}</td></tr>
-            <tr><td>P. Jugados: {{jugador.partidos_jugados}}</td></tr>
-            <tr><td>MVP: {{jugador.mvp.count}}</td></tr>
-            </table>
-            </div>
-            <div class="col-8">
-                <h3>{{jugador}}</h3>
-                <table>   
-                        <tr><td>P. Ganados: {{jugador.partidos_ganados}}</td><td>P. perdidos: {{jugador.partidos_perdidos}}</td></tr>
-                        <tr><td>T. amarillas: {{jugador.tarjetas_amarillas}}</td><td>T. rojas: {{jugador.tarjetas_rojas}}</td></tr>
-                        <rt><td>GA: {{jugador.goles_a_favor}}</td><td>GC: {{jugador.goles_en_contra}}</td></tr>
-                </table>
-                <div class="row">
-                    <div class="col-12">
-                        <p>Sancionado: {{jugador.sancionado}} </p>
-                    </div>
-                </table>
-            </div>
+    <div class="row"> <!--  FILA    -->
+        <div class="col-4"> <!--COLUMNA 1-->
+            <img class="foto" src="{%if jugador.imagen%}{{jugador.imagen.url}}{%else%} {%static 'images/jugador.jpg'%}{%endif%}" alt="imagen jugador" style="width:120px"></img>
+            <h3 style="margin-left: 10px;">{{jugador}}</h3>
+            {{jugador.puntos}} Puntos
         </div>
-        
-    </div>
+        <div class="col-8"><!--COLUMNA 2-->
+            <div class="row">
+                <div class="col-12">
+                    Partidos Jugados {{jugador.partidos_jugados}}
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                P. Ganados: {{jugador.partidos_ganados}}
+                </div>
+                <div class="col-6">
+                P. perdidos: {{jugador.partidos_perdidos}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    T. amarillas: {{jugador.tarjetas_amarillas}}
+                </div>
+                <div class="col-6">
+                    T. rojas: {{jugador.tarjetas_rojas}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    GA: {{jugador.goles_a_favor}}
+                </div>
+                <div class="col-6">
+                    GC: {{jugador.goles_en_contra}}
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    {{jugador.mvp.count}} MPV
+                </div>
+            </div>
+            
+        </div>
+    </div><!--  FILA    -->
 </div>
 <br>
 {%endblock%}
