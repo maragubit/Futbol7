@@ -577,7 +577,15 @@ a:focus {
 }
 
 .jugador {
-  width:95%;
+  max-width: 450px;
   text-align: center;
-  border: solid 2px black
+  border: solid 2px black;
+  display: flex;
+  border-radius: 10px;
+  background-image: url('/static/images/fondofutbol.jpg');
+  font-weight:bold;
+}
+
+img.foto {
+  border-radius: 60px;
 }

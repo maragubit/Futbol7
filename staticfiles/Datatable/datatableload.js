@@ -5,7 +5,7 @@ $(document).ready( function () {
       "aaSorting": [],
       "pageLength": 50,
       "order": [[ 1, "desc" ], [ 8, "desc" ],[ 6, "desc" ]],
-
+      
       "language": {
                   "lengthMenu": "Mostrar _MENU_ jugadores por página",
                   "zeroRecords": "No se ha encontrado nada - disculpe",
@@ -27,7 +27,7 @@ $(document).ready( function () {
     "scrollX": true,
     "aaSorting": [],
     "pageLength": 50,
-
+    
     "language": {
                 "lengthMenu": "Mostrar _MENU_ partidos por página",
                 "zeroRecords": "No se ha encontrado nada - disculpe",
