@@ -6,6 +6,8 @@ __pycache__
 db.sqlite3
 media
 futbol7/settings.py
+static
+staticfiles
 
 # Backup files # 
 *.bak 
